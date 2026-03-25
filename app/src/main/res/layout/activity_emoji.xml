@@ -21,20 +21,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="happy"
+            android:id="@+id/happyBTN"
             android:backgroundTint="@color/black"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="medium"/>
+            android:text="medium"
+            android:id="@+id/mediumBTN"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="angry"/>
+            android:text="angry"
+            android:id="@+id/angryBTN"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="upset" />
+            android:text="upset"
+            android:id="@+id/upsetBTN"/>
 
 
     </LinearLayout>

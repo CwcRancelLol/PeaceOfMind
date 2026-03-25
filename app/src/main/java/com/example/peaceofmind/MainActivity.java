@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -24,19 +23,24 @@ public class MainActivity extends AppCompatActivity {
         beginBTN = (Button)findViewById(R.id.beginBTN);
 
 
+        beginBTN.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v){
 
+
+
+                //Add this back later
+                //Intent leaveIntent = new Intent(MainActivity.this, EmojiActivity.class);
+                //startActivity(leaveIntent);
+
+            }
+
+        });
 
     }
 
-    beginBTN.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick (View v){
-
-        Intent leaveIntent = new Intent(MainActivity.this, activity_emoji.class);
-        startActivity(leaveIntent);
-
-    }
 
 
-    });
+
+
 }
