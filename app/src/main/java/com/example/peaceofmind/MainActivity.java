@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_main);
         beginBTN = (Button)findViewById(R.id.beginBTN);
 
 
@@ -29,9 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
                 //Add this back later
-                //Intent leaveIntent = new Intent(MainActivity.this, EmojiActivity.class);
-                //startActivity(leaveIntent);
+                Intent leaveIntent = new Intent(MainActivity.this, EmojiActivity.class);
+                startActivity(leaveIntent);
 
             }
 
