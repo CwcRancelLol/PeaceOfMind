@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick (View v){
 
-
-
-
                 //Add this back later
                 Intent leaveIntent = new Intent(MainActivity.this, EmojiActivity.class);
                 startActivity(leaveIntent);

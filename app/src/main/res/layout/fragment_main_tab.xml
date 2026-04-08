@@ -6,8 +6,10 @@
     tools:context=".MainTab">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <!-- I FRICKING MESSED UP... THIS IS THE HISTORY TAB, NOT MAIN -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="second Main fragment hola" />
+        android:text="Main fragment hola" />
 </FrameLayout>

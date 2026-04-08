@@ -14,9 +14,9 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch(position){
-            case 0: return new ExercisesTab();
-            case 1: return new MainTab();
-            case 2: return new HistoryTab();
+            case 2: return new ExercisesTab();
+            case 0: return new MainTab();
+            case 1: return new HistoryTab();
             default: return new MainTab();
         }
     }
