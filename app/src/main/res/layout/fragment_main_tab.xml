@@ -1,15 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="16dp"
     tools:context=".MainTab">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <!-- I FRICKING MESSED UP... THIS IS THE HISTORY TAB, NOT MAIN -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Main fragment hola" />
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Sun"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Mon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Tue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Wed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Thu"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:text="Fri"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" 'CwcRancelLol...faces a lot of distractions..furthering him from his dreams...despite all that, he remains vigilant.'"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+
+    <Button
+        android:id="@+id/btnMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="idk yet" />
+
+    <Button
+        android:id="@+id/btnJournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Journal Entry"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercises"
+        android:layout_marginTop="8dp" />
+
+
+
+
+
+
+</LinearLayout>
