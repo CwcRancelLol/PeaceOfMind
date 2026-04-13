@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeaceOfMind">
         <activity
+            android:name=".JournalEntry"
+            android:exported="false" />
+        <activity
             android:name=".MainHub"
             android:exported="false" />
         <activity

@@ -78,20 +78,20 @@
 
 
     <Button
-        android:id="@+id/btnMood"
+        android:id="@+id/beginBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="idk yet" />
+        android:text="Begin Session" />
 
     <Button
-        android:id="@+id/btnJournal"
+        android:id="@+id/journalBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Journal Entry"
         android:layout_marginTop="8dp" />
 
     <Button
-        android:id="@+id/btnExercise"
+        android:id="@+id/exercisesBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Exercises"
