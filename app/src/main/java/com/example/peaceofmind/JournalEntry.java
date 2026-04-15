@@ -1,9 +1,18 @@
 package com.example.peaceofmind;
 
+import static com.example.peaceofmind.Session.getRandomPrompt;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Random;
+
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,15 +29,26 @@ public class JournalEntry extends AppCompatActivity {
 
     Button saveBTN;
 
+    Session currentSession;
+
+    String currentPrompt;
 
 
-    private static final String[] prompts = {
-            "What made you feel good today?",
-            "What challenged you today?",
-            "What are you grateful for?",
-            "Describe your mood and why you feel this way.",
-            "What is something you learned today?"
-    };
+    private String getRandomPrompt() {
+        String[] prompts = {
+                "How are you feeling today?",
+                "What made you smile today?",
+                "What is something you're grateful for?",
+                "What’s been on your mind lately?"
+        };
+
+        Random random = new Random();
+        return prompts[random.nextInt(prompts.length)];
+    }
+
+
+
+
 
 
 
@@ -42,18 +62,34 @@ public class JournalEntry extends AppCompatActivity {
         responseET = (EditText) findViewById(R.id.responseET);
         saveBTN = (Button) findViewById(R.id.saveBTN);
 
+        String todayDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                .format(new Date());
 
+        //SessionManager.startSessionIfNeeded(todayDate);
 
+        //currentSession = SessionManager.getCurrentSession();
 
+        // Get random prompt
+        currentPrompt = getRandomPrompt();
+        promptTV.setText(currentPrompt);
 
+        saveBTN.setOnClickListener(v -> saveEntry());
+    }
 
+    private void saveEntry() {
+        String entryText = responseET.getText().toString();
 
+        if (entryText.isEmpty()) {
+            Toast.makeText(this, "Please write something", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
+        currentSession.setJournalPrompt(currentPrompt);
+        currentSession.setJournalEntry(entryText);
 
-
-
-
-
+        Intent intent = new Intent(JournalEntry.this, MainTab.class);
+        startActivity(intent);
+        finish();
 
     }
 
