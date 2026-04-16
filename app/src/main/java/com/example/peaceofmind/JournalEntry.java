@@ -84,10 +84,10 @@ public class JournalEntry extends AppCompatActivity {
             return;
         }
 
-        currentSession.setJournalPrompt(currentPrompt);
-        currentSession.setJournalEntry(entryText);
+        //currentSession.setJournalPrompt(currentPrompt);
+        //currentSession.setJournalEntry(entryText);
 
-        Intent intent = new Intent(JournalEntry.this, MainTab.class);
+        Intent intent = new Intent(JournalEntry.this, MainHub.class);
         startActivity(intent);
         finish();
 
