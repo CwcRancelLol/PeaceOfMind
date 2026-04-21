@@ -26,22 +26,33 @@ public class EmojiActivity extends AppCompatActivity {
         upsetBTN =(Button)findViewById(R.id.upsetBTN);
         mediumBTN =(Button)findViewById(R.id.mediumBTN);
 
+        happyBTN.setOnClickListener(v -> openNext("happy"));
+        angryBTN.setOnClickListener(v -> openNext("angry"));
+        upsetBTN.setOnClickListener(v -> openNext("upset"));
+        mediumBTN.setOnClickListener(v -> openNext("medium"));
+
+
+//
+//
+//        happyBTN.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick (View v){
+//
+//                //Add this back later
+//                Intent intent = new Intent(EmojiActivity.this, BreathingExercise.class);
+//                intent.putExtra("mood", );
+//                startActivity(intent);
+//            }
+//
+//        });
 
 
 
-        happyBTN.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View v){
+    }
 
-                //Add this back later
-                Intent leaveIntent = new Intent(EmojiActivity.this, MainHub.class);
-                startActivity(leaveIntent);
-
-            }
-
-        });
-
-
-
+    private void openNext(String selectedMood) {
+        Intent intent = new Intent(EmojiActivity.this, ExerciseActivity.class);
+        intent.putExtra("mood", selectedMood);
+        startActivity(intent);
     }
 }

@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainTab extends Fragment {
 
-        Button beginBTN, journalBTN, exercisesBTN;
+        Button beginBTN, journalBTN;
 
 
     @Override
@@ -23,7 +23,6 @@ public class MainTab extends Fragment {
 
         beginBTN = (Button) view.findViewById(R.id.beginBTN);
         journalBTN = (Button) view.findViewById(R.id.journalBTN);
-        exercisesBTN = (Button) view.findViewById(R.id.exercisesBTN);
 
 
 
