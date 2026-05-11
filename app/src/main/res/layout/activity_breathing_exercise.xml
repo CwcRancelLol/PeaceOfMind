@@ -4,33 +4,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/Beige">
 
 
-    <View
-        android:id="@+id/breathCircle"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/circle"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center">
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"/>
+        <View
+            android:id="@+id/breathCircle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"/>
 
-    <TextView
-        android:id="@+id/breathText"
-        android:layout_width="wrap_content"
+
+        <TextView
+            android:id="@+id/countDownTV"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/breathText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:text="hello"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+
+
+
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:text="Get Ready"
-        android:textSize="20sp"
-        android:paddingTop="50dp"/>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="bottom|center"
         android:text="End"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/BlueGray"
         android:id="@+id/endBTN"/>
+
 
 </LinearLayout>

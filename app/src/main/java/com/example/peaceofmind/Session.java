@@ -2,11 +2,17 @@ package com.example.peaceofmind;
 
 import android.widget.Button;
 import java.util.Random;
+import java.io.Serializable;
+import java.util.UUID;
 
 
-public class Session {
+public class Session implements Serializable {
 
     private String mood;
+
+    private String id;
+
+    private int mood2;
 
     private String journalPrompt;
 
@@ -18,10 +24,9 @@ public class Session {
 
 
     public Session(String date) {
-
+        this.id = UUID.randomUUID().toString();
         this.date = date;
     }
-
 
 
     private static final String[] prompts = {
@@ -38,8 +43,14 @@ public class Session {
     }
 
 
+
+
     public String getMood() {
         return mood;
+    }
+
+    public int getMood2() {
+        return mood2;
     }
 
     public String getJournalEntry() {
@@ -59,8 +70,16 @@ public class Session {
         return exercisesDone;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public void setMood(String mood) {
         this.mood = mood;
+    }
+
+    public void setMood2(int mood2) {
+        this.mood2 = mood2;
     }
 
     public void setJournalPrompt(String journalPrompt) {
@@ -73,6 +92,10 @@ public class Session {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setExercisesDone(int exercisesDone) {

@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Lavender">#C7A0CB</color>
+    <color name="CharcoalGray">#4A4A4A</color>
+    <color name="BlueGray">#293238</color>
+    <color name="lightNavyBlue">#4B68B8</color>
+    <color name="NavyBlue">#202A44</color>
+    <color name="NightBlue">#1B1F2A</color>
+    <color name="SkyBlue">#A4ADE7</color>
+    <color name="Green">#799900</color>
+    <color name="LightBlue">#58C4EA</color>
+    <color name="Camel">#C19A6B</color>
+    <color name="ChocolateBrown">#2e1e0a</color>
+    <color name="Beige">#C7C2B5</color>
+    <color name="Maroon">#800000</color>
+    <color name="DarkTeal">#006969</color>
+
+
+
+
+
 </resources>

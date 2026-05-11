@@ -10,15 +10,15 @@ public class BreathingExercise {
 
         List<String> exercises = new ArrayList<>();
 
-        if (mood.equals("upset")) {
-            exercises.add("4-4-4 breathing");
+        if ("upset".equals(mood)) {
+            exercises.add("upset breathing");
             exercises.add("Deep inhale + slow exhale");
 
-        } else if (mood.equals("angry")) {
-            exercises.add("4-7-8 breathing");
+        } else if ("angry".equals(mood)) {
+            exercises.add("angry breathing");
             exercises.add("Box breathing");
 
-        } else if (mood.equals("happy")) {
+        } else if ("happy".equals(mood)) {
             exercises.add("Light breathing");
 
         } else {

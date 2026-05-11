@@ -1,45 +1,81 @@
 package com.example.peaceofmind;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.UUID;
+
 public class SessionStorage {
-    private static final String FILE_NAME = "sessions.json";  // or you can use another name
 
-    // Save list of sessions to a file
-    public static void saveSessions(Context context, List<Session> sessions) {
+
+
+    private static ArrayList<Session> sessions = new ArrayList<>();
+
+    public static void addSession(Context context, Session session) {
+        sessions.add(session);
+        save(context);
+    }
+
+
+    private static final String KEY = "sessions";
+
+    public static void save(Context context) {
+
+        SharedPreferences prefs =
+                context.getSharedPreferences("app", Context.MODE_PRIVATE);
+
         Gson gson = new Gson();
-        String json = gson.toJson(sessions);  // Convert the list to JSON
+        String json = gson.toJson(sessions);
 
-        try {
-            FileOutputStream fos = context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
-            fos.write(json.getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        prefs.edit().putString(KEY, json).apply();
+    }
+
+    public static void load(Context context) {
+
+        SharedPreferences prefs = context.getSharedPreferences("app", Context.MODE_PRIVATE);
+
+        String json = prefs.getString(KEY, null);
+
+        if (json != null) {
+            Gson gson = new Gson();
+
+            Type type = new TypeToken<ArrayList<Session>>() {}.getType();
+
+            sessions = gson.fromJson(json, type);
+        }
+
+        for (Session s : sessions){
+            if (s.getId() == null){
+                s.setId(UUID.randomUUID().toString());
+            }
         }
     }
 
-    // Load the list of sessions from the file
-    public static List<Session> loadSessions(Context context) {
-        List<Session> sessions = new ArrayList<>();
-        Gson gson = new Gson();
 
-        try {
-            FileInputStream fis = context.openFileInput(FILE_NAME);
-            InputStreamReader reader = new InputStreamReader(fis);
 
-            sessions = gson.fromJson(reader, new TypeToken<List<Session>>(){}.getType());
-
-            reader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static Session getSessionById(String id) {
+        for (Session s : sessions) {
+            if (s.getId() != null && s.getId().equals(id)) {
+                return s;
+            }
         }
+        return null;
+    }
 
+
+
+
+    public static ArrayList<Session> getSessions(){
         return sessions;
     }
+
+
 }

@@ -2,46 +2,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradiantbg2"
     android:gravity="center">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/notweaktospeak"
+        android:layout_marginBottom="150dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How Are You Feeling Today?"/>
+        android:text="How Are You Feeling Today?"
+        android:textColor="@color/white"/>
 
     <!-- buttons are temporary and meant to be replaced with emojis. Add IDs-->
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="50dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="happy"
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:id="@+id/happyBTN"
-            android:backgroundTint="@color/black"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/happyemoji"
+            android:layout_marginRight="15dp"
+            android:background="@null"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="medium"
-            android:id="@+id/mediumBTN"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="angry"
-            android:id="@+id/angryBTN"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="upset"
-            android:id="@+id/upsetBTN"/>
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/mediumBTN"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mediumface"
+            android:layout_marginRight="15dp"
+            android:background="@null"/>
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/angryBTN"
+            android:scaleType="centerCrop"
+            android:src="@drawable/angryface"
+            android:layout_marginRight="15dp"
+            android:background="@null"/>
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/upsetBTN"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upsetemoji"
+            android:background="@null"/>
 
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
 
 
 

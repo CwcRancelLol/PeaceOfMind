@@ -2,20 +2,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/welcomeScreen"
+    android:background="@drawable/gradiantbg">
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/peace_of_mind_logo"
-        android:gravity="top"/>
-
-
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:text="Welcome\nTo\nPeace of Mind"/>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/mental_health" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="Protect your peace"
+            android:textStyle="italic"
+            android:textSize="25dp"
+            android:textColor="@color/white" />
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
         android:text="Begin"
-        android:id="@+id/beginBTN"/>
+        android:id="@+id/beginBTN"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/LightBlue"/>
+
+
+
+
+
+    <!--android:id="@id/beginBTN2" -->
     
 
 

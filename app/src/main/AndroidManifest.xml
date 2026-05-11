@@ -11,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeaceOfMind">
+        <service android:name=".Music" />
+        <activity
+            android:name=".ActualJournalFreeWrite"
+            android:exported="false" />
+        <activity
+            android:name=".JournalFreeWrite"
+            android:exported="false" />
+        <activity
+            android:name=".SessionDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".BreathingExerciseActivity"
             android:exported="false" />
@@ -35,6 +45,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
+
 
 </manifest>
